@@ -1,0 +1,28 @@
+group 'com.lrojas'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+jar{
+    baseName = 'HttpClient'
+    version = '1.0.0'
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile 'commons-validator:commons-validator:1.4.0'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+mainClassName = 'Main'
+
+run{
+    standardInput = System.in
+}
